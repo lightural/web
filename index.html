@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>輕甜本味 Lightural - 獻給忙碌的您，一份無負擔的療癒滋味</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: #F8F5F2; /* 米白色背景 */
+            color: #5D5D5D; /* 大地色系文字 */
+        }
+        .text-brand-green {
+            color: #A3B18A; /* 假設的淺綠色，請替換為Logo中的實際顏色 */
+        }
+        .bg-brand-green {
+            background-color: #A3B18A; /* 假設的淺綠色 */
+        }
+        .bg-brand-beige {
+            background-color: #F8F5F2; /* 米白色 */
+        }
+        .text-brand-brown {
+            color: #795548; /* 溫暖大地色 */
+        }
+        .border-brand-green {
+            border-color: #A3B18A;
+        }
+        /* 針對錨點捲動的偏移，避免被固定導航欄遮擋 */
+        section[id] {
+            scroll-margin-top: 80px; /* 根據您的導航欄高度調整 */
+        }
+        .hero-bg {
+            background-image: url('h.png'); /* 更新: 主視覺圖片 */
+            background-size: cover;
+            background-position: center;
+        }
+        .about-us-img {
+            background-image: url('2.jpg'); /* 更新: 關於我們圖片 */
+            background-size: cover;
+            background-position: center;
+            min-height: 300px;
+        }
+        .specialties-img {
+            background-image: url('1.jpg'); /* 更新: 輕甜特選圖片 */
+            background-size: cover;
+            background-position: center;
+            min-height: 400px;
+        }
+        .mascot-img {
+            max-width: 150px; /* 吉祥物圖片大小 */
+        }
+    </style>
+</head>
+<body class="bg-brand-beige text-brand-brown">
+
+    <header class="bg-brand-beige/80 shadow-sm fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#hero" class="flex items-center space-x-2">
+                <img src="logo.png" alt="輕甜本味 Lightural Logo" class="h-10">
+                <span class="text-2xl font-bold text-brand-green">輕甜本味 Lightural</span>
+            </a>
+            <nav class="hidden md:flex space-x-6">
+                <a href="#hero" class="text-brand-brown hover:text-brand-green transition-colors">首頁</a>
+                <a href="#about" class="text-brand-brown hover:text-brand-green transition-colors">關於我們</a>
+                <a href="#menu" class="text-brand-brown hover:text-brand-green transition-colors">輕甜菜單</a>
+                <a href="#location" class="text-brand-brown hover:text-brand-green transition-colors">店鋪資訊</a>
+                <a href="#social" class="text-brand-brown hover:text-brand-green transition-colors">社群分享</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden text-brand-brown focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-beige shadow-lg">
+            <a href="#hero" class="block px-6 py-3 text-brand-brown hover:bg-brand-green/20 transition-colors">首頁</a>
+            <a href="#about" class="block px-6 py-3 text-brand-brown hover:bg-brand-green/20 transition-colors">關於我們</a>
+            <a href="#menu" class="block px-6 py-3 text-brand-brown hover:bg-brand-green/20 transition-colors">輕甜菜單</a>
+            <a href="#location" class="block px-6 py-3 text-brand-brown hover:bg-brand-green/20 transition-colors">店鋪資訊</a>
+            <a href="#social" class="block px-6 py-3 text-brand-brown hover:bg-brand-green/20 transition-colors">社群分享</a>
+        </div>
+    </header>
+
+    <section id="hero" class="hero-bg min-h-screen flex items-center justify-center text-center text-white pt-20">
+        <div class="bg-black/30 p-8 md:p-12 rounded-lg">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4" style="font-family: 'Noto Sans TC', sans-serif;">獻給忙碌的您，一份無負擔的療癒滋味。</h1>
+            <p class="text-xl md:text-3xl" style="font-family: 'Noto Sans TC', sans-serif;">輕甜剛剛好，吃甜不怕胖。</p>
+        </div>
+    </section>
+
+    <main class="container mx-auto px-6 py-12 md:py-20 space-y-16 md:space-y-24">
+        <section id="about" class="scroll-mt-20">
+            <h2 class="text-3xl md:text-4xl font-bold text-brand-green text-center mb-10 md:mb-12">堅持本味，享受輕甜。</h2>
+            <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+                <div class="md:w-1/2 space-y-4 text-lg leading-relaxed">
+                    <p>在喧囂城市中，我們懂您對健康與美味的渴望。輕甜本味 Lightural，堅持選用最單純的天然食材，以溫柔製程，打造無香精、無色素、少糖低負擔的甜品。</p>
+                    <p>讓每一口豆花、仙草、愛玉，都能是您日常的安心小確幸，不再是甜蜜的負擔。</p>
+                    <p class="font-semibold text-brand-green">吃得健康又美味，就是我們想獻給您最好的禮物。</p>
+                </div>
+                <div class="md:w-1/2 rounded-lg overflow-hidden shadow-lg">
+                    <div class="about-us-img w-full h-64 md:h-96">
+                        </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="specialties">
+            <h2 class="text-3xl md:text-4xl font-bold text-brand-green text-center mb-10 md:mb-12">天然好料，輕甜入心。</h2>
+            <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+                <div class="md:w-1/2 md:order-2 space-y-4 text-lg leading-relaxed">
+                    <p>我們的豆花滑嫩綿密，口感好易接受；仙草醇厚回甘，冷熱皆宜；愛玉清爽解渴，自帶檸檬香氣。</p>
+                    <p>搭配多種嚴選天然配料，如手作芋圓、地瓜圓、Q彈珍珠、綿密紅豆等，為您帶來豐富層次與純粹的美味，滿足對「好吃又健康」的期待。</p>
+                </div>
+                <div class="md:w-1/2 md:order-1 rounded-lg overflow-hidden shadow-lg">
+                     <div class="specialties-img w-full h-80 md:h-[500px]">
+                        </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="menu">
+            <h2 class="text-3xl md:text-4xl font-bold text-brand-green text-center mb-10 md:mb-12">輕甜菜單 - 您的每日小確幸</h2>
+            <div class="flex justify-center mb-8">
+                <img src="bean.png" alt="甜豆小本 吉祥物" class="mascot-img rounded-full shadow-md"> 
+            </div>
+            <div class="grid md:grid-cols-2 gap-x-12 gap-y-8 max-w-4xl mx-auto text-lg">
+                <div>
+                    <h3 class="text-2xl font-semibold text-brand-green mb-4 border-b-2 border-brand-green pb-2">豆花系列</h3>
+                    <ul class="space-y-3">
+                        <li class="flex justify-between"><span>經典原味豆花</span> <span class="font-medium text-brand-brown">NT$ 45</span></li>
+                        <li class="flex justify-between"><span>紅豆豆花</span> <span class="font-medium text-brand-brown">NT$ 60</span></li>
+                        <li class="flex justify-between"><span>花生薏仁豆花</span> <span class="font-medium text-brand-brown">NT$ 65</span></li>
+                        <li class="flex justify-between"><span>芋圓地瓜圓豆花</span> <span class="font-medium text-brand-brown">NT$ 70</span></li>
+                        <li class="flex justify-between"><span>芋頭控豆花</span> <span class="font-medium text-brand-brown">NT$ 75</span></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-semibold text-brand-green mb-4 border-b-2 border-brand-green pb-2">仙草系列</h3>
+                    <ul class="space-y-3">
+                        <li class="flex justify-between"><span>原味嫩仙草</span> <span class="font-medium text-brand-brown">NT$ 45</span></li>
+                        <li class="flex justify-between"><span>珍珠仙草</span> <span class="font-medium text-brand-brown">NT$ 60</span></li>
+                        <li class="flex justify-between"><span>輕甜招牌綜合仙草</span> <span class="font-medium text-brand-brown">NT$ 75</span></li>
+                    </ul>
+                    <h3 class="text-2xl font-semibold text-brand-green mt-6 mb-4 border-b-2 border-brand-green pb-2">愛玉系列</h3>
+                    <ul class="space-y-3">
+                        <li class="flex justify-between"><span>檸檬愛玉</span> <span class="font-medium text-brand-brown">NT$ 50</span></li>
+                        <li class="flex justify-between"><span>輕甜特選愛玉</span> <span class="font-medium text-brand-brown">NT$ 80</span></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="location">
+            <h2 class="text-3xl md:text-4xl font-bold text-brand-green text-center mb-10 md:mb-12">尋找您的輕甜角落</h2>
+            <div class="bg-white p-8 md:p-10 rounded-lg shadow-xl max-w-3xl mx-auto text-center md:text-left">
+                <div class="md:flex md:space-x-8">
+                    <div class="md:w-2/3 space-y-4 text-lg">
+                        <p>輕甜本味 Lightural 期待您的蒞臨，感受無負擔的甜美滋味。</p>
+                        <p><strong>地址：</strong> 台北市南港區 [請填寫具體店鋪地址]</p>
+                        <p><strong>營業時間：</strong> [請填寫具體營業時間，例如：週一至週五 11:00-21:00，週六日 12:00-20:00]</p>
+                        <p><strong>聯絡電話：</strong> [請填寫電話號碼]</p>
+                        <a href="https://www.google.com/maps/search/?api=1&query=台北市南港區" target="_blank" rel="noopener noreferrer" class="mt-6 inline-block bg-brand-green text-white font-semibold px-8 py-3 rounded-lg hover:bg-opacity-90 transition-colors shadow-md">
+                            Google Maps 指引
+                        </a>
+                    </div>
+                    <div class="md:w-1/3 mt-8 md:mt-0">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.703919500986!2d121.56542681500619!3d25.04410108396727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ab0000000001%3A0x1c23368376900000!2sTaipei%20City%20Hall!5e0!3m2!1sen!2stw!4v1678886400000!5m2!1sen!2stw" 
+                            width="100%" 
+                            height="250" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            class="rounded-lg shadow">
+                        </iframe>
+                         <p class="text-xs mt-2 text-gray-500">地圖僅為示意，請替換為實際店鋪位置。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="social">
+            <h2 class="text-3xl md:text-4xl font-bold text-brand-green text-center mb-6">立即品嚐，享受無負擔的甜！</h2>
+            <div class="bg-white p-8 md:p-10 rounded-lg shadow-xl max-w-3xl mx-auto text-center">
+                <p class="text-lg mb-6">現在就來店裡，感受輕甜本味帶來的純粹美好！別忘了分享您的「輕甜」時刻，加入我們吧！✨</p>
+                <div class="bg-brand-green/10 border-l-4 border-brand-green p-4 rounded-md mb-8">
+                    <h3 class="text-xl font-semibold text-brand-green mb-2">🎉 開幕限定好禮 🎉</h3>
+                    <p>打卡＋追蹤我們，即可獲得超可愛的「甜豆小本」貼紙一份！</p>
+                </div>
+                <div class="flex justify-center space-x-6 mb-8">
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="text-brand-brown hover:text-brand-green transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.03998C6.48 2.03998 2 6.51998 2 12.04C2 17.08 5.64 21.22 10.44 21.9L10.44 14.88L7.9 14.88L7.9 12.04L10.44 12.04L10.44 9.76001C10.44 7.28001 11.94 5.92001 14.22 5.92001C15.3 5.92001 16.22 6.00001 16.5 6.04001L16.5 8.56001L15.2 8.56001C13.96 8.56001 13.56 9.24001 13.56 10.12L13.56 12.04L16.38 12.04L15.96 14.88L13.56 14.88L13.56 21.96C18.8 21.52 22 17.2 22 12.04C22 6.51998 17.52 2.03998 12 2.03998Z"/></svg>
+                        <span class="sr-only">Facebook</span>
+                    </a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="text-brand-brown hover:text-brand-green transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13401 2 7.13097 2.00945 6.10118 2.0521C5.07439 2.09458 4.24799 2.28361 3.50437 2.56156C2.71493 2.85839 2.05839 3.31493 1.56156 4.00437C1.06473 4.69382 0.608187 5.35035 0.311359 6.1398C0.0334091 6.88342 -0.155622 7.70982 -0.198101 8.73661C-0.240753 9.7664 -0.250202 10.7695 -0.25 12C-0.250202 13.2305 -0.240753 14.2336 -0.198101 15.2634C-0.155622 16.2902 0.0334091 17.1166 0.311359 17.8602C0.608187 18.6497 1.06473 19.3062 1.56156 19.9956C2.05839 20.6851 2.71493 21.1416 3.50437 21.4384C4.24799 21.7164 5.07439 21.9054 6.10118 21.9479C7.13097 21.9906 8.13401 22 12 22C15.866 22 16.869 21.9906 17.8988 21.9479C18.9256 21.9054 19.752 21.7164 20.4956 21.4384C21.2851 21.1416 21.9416 20.6851 22.4384 19.9956C22.9353 19.3062 23.3918 18.6497 23.6886 17.8602C23.9666 17.1166 24.1556 16.2902 24.1981 15.2634C24.2408 14.2336 24.2502 13.2305 24.25 12C24.2502 10.7695 24.2408 9.7664 24.1981 8.73661C24.1556 7.70982 23.9666 6.88342 23.6886 6.1398C23.3918 5.35035 22.9353 4.69382 22.4384 4.00437C21.9416 3.31493 21.2851 2.85839 20.4956 2.56156C19.752 2.28361 18.9256 2.09458 17.8988 2.0521C16.869 2.00945 15.866 2 12 2ZM12 4.1087C15.7321 4.1087 16.6607 4.11742 17.618 4.15871C18.5231 4.19772 19.0948 4.37818 19.4851 4.5249C19.9581 4.7029 20.2971 4.94449 20.6318 5.27919C20.9665 5.61388 21.2081 5.95288 21.3861 6.42592C21.5328 6.81625 21.7133 7.38793 21.7523 8.29303C21.7936 9.25032 21.8023 10.1789 21.8023 11.9106L21.8023 12.0894C21.8023 13.8211 21.7936 14.7497 21.7523 15.707C21.7133 16.6121 21.5328 17.1837 21.3861 17.5741C21.2081 18.0471 20.9665 18.3861 20.6318 18.7208C20.2971 19.0555 19.9581 19.2971 19.4851 19.4751C19.0948 19.6218 18.5231 19.8023 17.618 19.8413C16.6607 19.8826 15.7321 19.8913 12 19.8913C8.26794 19.8913 7.33935 19.8826 6.38203 19.8413C5.47692 19.8023 4.90525 19.6218 4.51492 19.4751C4.04188 19.2971 3.70288 19.0555 3.36819 18.7208C3.0335 18.3861 2.7919 18.0471 2.6139 17.5741C2.46718 17.1837 2.28672 16.6121 2.24771 15.707C2.20642 14.7497 2.19769 13.8211 2.19769 12.0894L2.19769 11.9106C2.19769 10.1789 2.20642 9.25032 2.24771 8.29303C2.28672 7.38793 2.46718 6.81625 2.6139 6.42592C2.7919 5.95288 3.0335 5.61388 3.36819 5.27919C3.70288 4.94449 4.04188 4.7029 4.51492 4.5249C4.90525 4.37818 5.47692 4.19772 6.38203 4.15871C7.33935 4.11742 8.26794 4.1087 12 4.1087ZM12 7.30435C9.40383 7.30435 7.30435 9.40383 7.30435 12C7.30435 14.5962 9.40383 16.6956 12 16.6956C14.5962 16.6956 16.6956 14.5962 16.6956 12C16.6956 9.40383 14.5962 7.30435 12 7.30435ZM12 14.587C10.5723 14.587 9.41304 13.4277 9.41304 12C9.41304 10.5723 10.5723 9.41304 12 9.41304C13.4277 9.41304 14.587 10.5723 14.587 12C14.587 13.4277 13.4277 14.587 12 14.587ZM17.0652 7.82609C17.0652 8.38308 16.6193 8.82891 16.0623 8.82891C15.5053 8.82891 15.0595 8.38308 15.0595 7.82609C15.0595 7.2691 15.5053 6.82326 16.0623 6.82326C16.6193 6.82326 17.0652 7.2691 17.0652 7.82609Z"/></svg>
+                        <span class="sr-only">Instagram</span>
+                    </a>
+                </div>
+                <a href="#menu" class="inline-block bg-brand-green text-white font-semibold px-10 py-4 rounded-lg text-xl hover:bg-opacity-90 transition-colors shadow-lg">
+                    查看完整菜單
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-brand-green/20 text-brand-brown text-center py-8 mt-16 md:mt-24">
+        <p>© 2025 輕甜本味 Lightural. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = mobileMenu.querySelectorAll('a');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Smooth scroll for anchor links and header offset
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // const headerOffset = document.querySelector('header').offsetHeight || 80;
+                    // const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+                    // const offsetPosition = elementPosition - headerOffset;
+
+                    // window.scrollTo({
+                    //     top: offsetPosition,
+                    //     behavior: "smooth"
+                    // });
+                     targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start' // Can be 'start', 'center', 'end', or 'nearest'
+                    });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
